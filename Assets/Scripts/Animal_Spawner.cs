@@ -1,25 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Animal_Spawner : MonoBehaviour {
 
-	public Creature prefab;
+	//public Creature prefab;
+	public List<Creature> prefabs;
 	public float interval;
 
-	private float lastSpawn;
+	private float LastSpawn;
+	private int size;
 
 	// Use this for initialization
 	void Start () {
-		Instantiate(prefab);
+		size = prefabs.Count;
+		Instantiate(prefabs[Random.Range(0,size)]);
+		LastSpawn = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("Update");
-		if(lastSpawn-interval < Time.time){
-			Debug.Log("Update:Instantiate");
-			Instantiate(prefab);
-			lastSpawn = Time.time;
+		if(interval-LastSpawn < 0){
+
+			Instantiate(prefabs[Random.Range(0,size)]);
+			LastSpawn = 0;
 		}
+		LastSpawn += Time.deltaTime;
 	}
 }
