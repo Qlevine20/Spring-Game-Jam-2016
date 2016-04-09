@@ -22,6 +22,8 @@ public class Animal_Mover : MonoBehaviour {
         animal_yDirection = Direction.y;
         animal_timer = 0.0f;
         animal_randomize = 3.0f;
+        Rigidbody2D itself = GetComponent<Rigidbody2D>();
+        itself.velocity = new Vector2(animal_xDirection * animal_xSpeed, animal_yDirection * animal_ySpeed);
     }
 	
 	// Update is called once per frame
@@ -33,9 +35,9 @@ public class Animal_Mover : MonoBehaviour {
             Vector2 Direction = setDirection();
             animal_xDirection = Direction.x;
             animal_yDirection = Direction.y;
+            Rigidbody2D itself = GetComponent<Rigidbody2D>();
+            itself.velocity = new Vector2(animal_xDirection * animal_xSpeed, animal_yDirection * animal_ySpeed);
         }
-
-        transform.Translate(animal_xDirection * Time.deltaTime * animal_xSpeed, animal_yDirection * Time.deltaTime * animal_ySpeed, 0.0f);
 	}
 
     void OnTriggerExit2D(Collider2D other)
@@ -71,10 +73,10 @@ public class Animal_Mover : MonoBehaviour {
         return dir;
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    /*void OnCollisionEnter2D(Collision2D other)
     {
         animal_xDirection *= -1;
         animal_yDirection *= -1;
     }
-    
+    */
 }
