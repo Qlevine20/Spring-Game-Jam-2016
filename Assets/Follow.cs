@@ -30,7 +30,7 @@ public class Follow : MonoBehaviour
 			var smoothedGazePoint = Smoothify(gazePointInScreenSpace);
 
 			var gazePointInWorldSpace = Camera.main.ScreenToWorldPoint(
-				new Vector3(smoothedGazePoint.x, smoothedGazePoint.y, Camera.main.nearClipPlane));
+				new Vector3(smoothedGazePoint.x, smoothedGazePoint.y, 10.0f));
 
 			transform.position = gazePointInWorldSpace;
 			_rendererComponent.enabled = true;

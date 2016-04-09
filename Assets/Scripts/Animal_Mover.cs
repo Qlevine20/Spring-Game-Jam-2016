@@ -47,6 +47,14 @@ public class Animal_Mover : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Dot")
+        {
+            Debug.Log("Lost");
+        }
+    }
+
     Vector2 setDirection()
     {
         Vector2 dir = new Vector2(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
