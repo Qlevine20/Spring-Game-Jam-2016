@@ -5,18 +5,18 @@ public class Animal_Mover : MonoBehaviour {
 
     public float animal_xSpeed;
     public float animal_ySpeed;
-    public float animal_xDirection;
-    public float animal_yDirection;
+    private float animal_xDirection;
+    private float animal_yDirection;
     public float animal_randomize;
-    public float chance_to_rotate;
-    public float animal_timer;
+    private float chance_to_rotate;
+    private float animal_timer;
     public bool isStraight = false;
 
     // Use this for initialization
     void Start () {
 
-        animal_xSpeed = Random.Range(1.0f, 3.0f);
-        animal_ySpeed = Random.Range(0.0f, 1.0f);
+        //animal_xSpeed = Random.Range(1.0f, 3.0f);
+        //animal_ySpeed = Random.Range(0.0f, 1.0f);
         Vector2 Direction = setDirection();
         animal_xDirection = Direction.x;
         animal_yDirection = Direction.y;
@@ -37,6 +37,15 @@ public class Animal_Mover : MonoBehaviour {
 
         transform.Translate(animal_xDirection * Time.deltaTime * animal_xSpeed, animal_yDirection * Time.deltaTime * animal_ySpeed, 0.0f);
 	}
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.tag == "Boundary")
+        {
+            Debug.Log("Exiting");
+            setDirection();
+        }
+    }
 
     Vector2 setDirection()
     {
