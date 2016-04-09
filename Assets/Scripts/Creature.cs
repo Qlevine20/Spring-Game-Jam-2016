@@ -9,12 +9,10 @@ public abstract class Creature : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		transform.position = Spawn();
-		Debug.Log("Spawn: " + transform.position.ToString());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		transform.position = Move();
-		Debug.Log("Move: " + transform.position.ToString());
 	}
 }
