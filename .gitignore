@@ -28,3 +28,60 @@ sysinfo.txt
 
 # Builds
 *.apk
+Assets/Editor.meta
+Assets/Editor/EyeXClientLibraryDeployer.cs
+Assets/Plugins.meta
+Assets/Plugins/x86.meta
+Assets/Plugins/x86/Tobii.EyeX.Client.Net20.dll.meta
+Assets/Plugins/x86/Tobii.EyeX.Client.Net20.xml
+Assets/Plugins/x86/Tobii.EyeX.Client.Net20.xml.meta
+Assets/Plugins/x86/Tobii.EyeX.Client.dll.meta
+Assets/Plugins/x86_64.meta
+Assets/Plugins/x86_64/Tobii.EyeX.Client.Net20.dll.meta
+Assets/Plugins/x86_64/Tobii.EyeX.Client.Net20.xml
+Assets/Plugins/x86_64/Tobii.EyeX.Client.Net20.xml.meta
+Assets/Plugins/x86_64/Tobii.EyeX.Client.dll.meta
+Assets/Standard Assets.meta
+Assets/Standard Assets/EyeXFramework.meta
+Assets/Standard Assets/EyeXFramework/Components.meta
+Assets/Standard Assets/EyeXFramework/Components/ActivatableComponent.cs
+Assets/Standard Assets/EyeXFramework/Components/EyePositionDataComponent.cs
+Assets/Standard Assets/EyeXFramework/Components/EyeXEngineAvailabilityComponent.cs
+Assets/Standard Assets/EyeXFramework/Components/FixationDataComponent.cs
+Assets/Standard Assets/EyeXFramework/Components/GazeAwareComponent.cs
+Assets/Standard Assets/EyeXFramework/Components/GazePointDataComponent.cs
+Assets/Standard Assets/EyeXFramework/Components/PannableComponent.cs
+Assets/Standard Assets/EyeXFramework/Components/UserPresenceComponent.cs
+Assets/Standard Assets/EyeXFramework/EnumHelpers.cs
+Assets/Standard Assets/EyeXFramework/EyeXActivatable.cs
+Assets/Standard Assets/EyeXFramework/EyeXActivationHub.cs
+Assets/Standard Assets/EyeXFramework/EyeXDataStreamBase.cs
+Assets/Standard Assets/EyeXFramework/EyeXDeviceStatus.cs
+Assets/Standard Assets/EyeXFramework/EyeXEngineAvailability.cs
+Assets/Standard Assets/EyeXFramework/EyeXEngineEnumerableStateAccessor.cs
+Assets/Standard Assets/EyeXFramework/EyeXEngineStateAccessor.cs
+Assets/Standard Assets/EyeXFramework/EyeXEngineStateValue.cs
+Assets/Standard Assets/EyeXFramework/EyeXEyePosition.cs
+Assets/Standard Assets/EyeXFramework/EyeXEyePositionDataStream.cs
+Assets/Standard Assets/EyeXFramework/EyeXFixationDataStream.cs
+Assets/Standard Assets/EyeXFramework/EyeXFixationPoint.cs
+Assets/Standard Assets/EyeXFramework/EyeXGameObjectInteractorBase.cs
+Assets/Standard Assets/EyeXFramework/EyeXGazeAware.cs
+Assets/Standard Assets/EyeXFramework/EyeXGazePoint.cs
+Assets/Standard Assets/EyeXFramework/EyeXGazePointDataStream.cs
+Assets/Standard Assets/EyeXFramework/EyeXGazeTracking.cs
+Assets/Standard Assets/EyeXFramework/EyeXHost.Profile.cs
+Assets/Standard Assets/EyeXFramework/EyeXHost.Tools.cs
+Assets/Standard Assets/EyeXFramework/EyeXHost.cs
+Assets/Standard Assets/EyeXFramework/EyeXInteractor.cs
+Assets/Standard Assets/EyeXFramework/EyeXMask.cs
+Assets/Standard Assets/EyeXFramework/EyeXPannable.cs
+Assets/Standard Assets/EyeXFramework/EyeXPanningHub.cs
+Assets/Standard Assets/EyeXFramework/EyeXUserPresence.cs
+Assets/Standard Assets/EyeXFramework/IEyeXBehavior.cs
+Assets/Standard Assets/EyeXFramework/IEyeXDataProvider.cs
+Assets/Standard Assets/EyeXFramework/IEyeXGlobalInteractor.cs
+Assets/Standard Assets/EyeXFramework/ProjectedRect.cs
+Assets/Standard Assets/EyeXFramework/ScreenHelpers.cs
+Assets/Standard Assets/EyeXFramework/Win32Helpers.cs
+Assets/Standard Assets/EyeXFramework/WindowHelpers.cs
