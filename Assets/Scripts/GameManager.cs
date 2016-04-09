@@ -13,15 +13,17 @@ public class GameManager : MonoBehaviour {
 
     void Start()
     {
-        UIscore = GetComponent<UI_Score>();
-        UIlives = GetComponent<UI_Lives>();
+        UIscore = GetComponentInChildren<UI_Score>();
+        UIlives = GetComponentInChildren<UI_Lives>();
+        UIlives.UpdateLives(lives);
+        UIscore.UpdateScore(score);
     }
 
     //Positive numbers to decrease, negative to increase
     public void ModifyLives(int value = 1)
     {
         lives -= value;
-        UIlives.UpdateLives(value);
+        UIlives.UpdateLives(lives);
     }
     
     //Positive numbers to increase, negative to decrease

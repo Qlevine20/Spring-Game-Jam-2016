@@ -9,6 +9,6 @@ public class UI_Lives : MonoBehaviour {
     public void UpdateLives(int lives)
     {
         livesRemaining = GetComponent<Text>();
-        livesRemaining.text = lives.ToString();
+        livesRemaining.text = "Lives: " + lives.ToString();
     }
 }
