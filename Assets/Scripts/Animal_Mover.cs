@@ -21,7 +21,7 @@ public class Animal_Mover : MonoBehaviour {
         animal_xDirection = Direction.x;
         animal_yDirection = Direction.y;
         animal_timer = 0.0f;
-        animal_randomize = 5.0f;
+        animal_randomize = 3.0f;
     }
 	
 	// Update is called once per frame
@@ -54,5 +54,10 @@ public class Animal_Mover : MonoBehaviour {
         return dir;
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        animal_xDirection *= -1;
+        animal_yDirection *= -1;
+    }
     
 }
