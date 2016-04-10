@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Dog : Creature {
 
 	private Vector3 targetVector;
@@ -8,6 +9,7 @@ public class Dog : Creature {
 	public float speed;
 
 	public override Vector3 Spawn(){
+		
 		var side = Random.Range(0,3);
 		var width = Random.Range(0,Screen.width);
 		var height = Random.Range(0,Screen.height);
