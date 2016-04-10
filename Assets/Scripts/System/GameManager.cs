@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     public static int lives = 3;
     public static int score = 0;
     public static float timer = 0.0f;
+    public GameObject LoseScreen;
     UI_Score UIscore;
     UI_Lives UIlives;
 
@@ -31,5 +32,17 @@ public class GameManager : MonoBehaviour {
     {
         score += points;
         UIscore.UpdateScore(score);
+    }
+    public void LoseGame() 
+    {
+        LoseScreen.SetActive(true);
+        Time.timeScale = 0.0f;
+    }
+    public void Update() 
+    {
+        if (lives < 1) 
+        {
+            LoseGame();
+        }
     }
 }
