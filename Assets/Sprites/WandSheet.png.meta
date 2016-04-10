@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 7174196744e69d74991666a8941659ed
+timeCreated: 1460265934
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: WandSheet_0
+    21300002: WandSheet_1
+    21300004: WandSheet_2
+    21300006: WandSheet_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: WandSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 400
+        height: 400
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 81, y: -81}
+        - {x: 70, y: -77}
+        - {x: 66, y: -77}
+        - {x: 66, y: -84}
+        - {x: 79, y: -102}
+        - {x: 385, y: -400}
+        - {x: 400, y: -400}
+        - {x: 400, y: -386}
+        - {x: 381, y: -369}
+    - name: WandSheet_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 400
+        height: 400
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -399}
+        - {x: 3, y: -398}
+        - {x: 3, y: -394}
+        - {x: 1, y: -392}
+        - {x: 0, y: -392}
+      - - {x: 67, y: -132}
+        - {x: 28, y: -106}
+        - {x: 19, y: -106}
+        - {x: 19, y: -123}
+        - {x: 381, y: -375}
+        - {x: 396, y: -375}
+        - {x: 396, y: -364}
+        - {x: 373, y: -344}
+      - - {x: 107, y: -59}
+        - {x: 77, y: -59}
+        - {x: 57, y: -83}
+        - {x: 57, y: -107}
+        - {x: 123, y: -139}
+        - {x: 156, y: -139}
+        - {x: 162, y: -137}
+        - {x: 177, y: -128}
+        - {x: 177, y: -102}
+        - {x: 134, y: -67}
+      - - {x: 150, y: -40}
+        - {x: 129, y: -40}
+        - {x: 120, y: -55}
+        - {x: 120, y: -68}
+        - {x: 132, y: -80}
+        - {x: 144, y: -84}
+        - {x: 165, y: -84}
+        - {x: 174, y: -71}
+        - {x: 174, y: -53}
+        - {x: 163, y: -43}
+    - name: WandSheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 400
+        height: 400
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 395, y: -380}
+        - {x: 395, y: -378}
+        - {x: 385, y: -351}
+        - {x: 73, y: -68}
+        - {x: 62, y: -68}
+        - {x: 62, y: -75}
+        - {x: 75, y: -93}
+        - {x: 392, y: -400}
+        - {x: 400, y: -400}
+        - {x: 400, y: -202}
+        - {x: 398, y: -200}
+        - {x: 395, y: -201}
+      - - {x: 396, y: 0}
+        - {x: 397, y: -3}
+        - {x: 400, y: -3}
+        - {x: 400, y: 0}
+    - name: WandSheet_3
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 400
+        height: 400
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 169, y: -60}
+        - {x: 129, y: -19}
+        - {x: 123, y: -19}
+        - {x: 123, y: -32}
+        - {x: 371, y: -392}
+        - {x: 383, y: -398}
+        - {x: 391, y: -398}
+        - {x: 392, y: -396}
+        - {x: 392, y: -389}
+        - {x: 364, y: -348}
+      - - {x: 396, y: 0}
+        - {x: 396, y: -202}
+        - {x: 398, y: -204}
+        - {x: 400, y: -203}
+        - {x: 400, y: 0}
+      - - {x: 86, y: -58}
+        - {x: 76, y: -74}
+        - {x: 76, y: -114}
+        - {x: 88, y: -132}
+        - {x: 120, y: -178}
+        - {x: 144, y: -178}
+        - {x: 156, y: -166}
+        - {x: 156, y: -101}
+        - {x: 126, y: -58}
+      - - {x: 83, y: -121}
+        - {x: 65, y: -121}
+        - {x: 58, y: -132}
+        - {x: 58, y: -159}
+        - {x: 71, y: -174}
+        - {x: 88, y: -174}
+        - {x: 92, y: -173}
+        - {x: 101, y: -159}
+        - {x: 101, y: -149}
+        - {x: 99, y: -137}
+      - - {x: 0, y: 0}
+        - {x: 0, y: -3}
+        - {x: 196, y: -3}
+        - {x: 198, y: -1}
+        - {x: 198, y: 0}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
