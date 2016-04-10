@@ -12,6 +12,7 @@ public class GameTime : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = Time.time.ToString();
+        int t = Mathf.RoundToInt(Time.time);
+		text.text = t.ToString();
 	}
 }

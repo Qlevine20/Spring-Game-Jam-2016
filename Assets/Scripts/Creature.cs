@@ -7,7 +7,7 @@ public abstract class Creature : MonoBehaviour {
 	public abstract Vector3 Move();
     
 	// Use this for initialization
-	void Start () {
+	public virtual void Start () {
 		transform.position = Spawn();
 	}
 	
