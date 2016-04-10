@@ -7,9 +7,9 @@ public class Dog : Creature {
 	private Vector3 targetVector;
 	private Vector3 origin;
 	public float speed;
+    public bool Caught = false;
 
 	public override Vector3 Spawn(){
-		
 		var side = Random.Range(0,3);
 		var width = Random.Range(0,Screen.width);
 		var height = Random.Range(0,Screen.height);
@@ -30,6 +30,15 @@ public class Dog : Creature {
 	}
 
 	public override Vector3 Move(){
-		return transform.position + (((targetVector-origin)).normalized * speed * Time.deltaTime);
+
+        if (!Caught)
+        {
+            if (((targetVector - origin).normalized * speed * Time.deltaTime).x > 0)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            return transform.position + (((targetVector - origin)).normalized * speed * Time.deltaTime);
+        }
+        return transform.position;
 	}
 }
