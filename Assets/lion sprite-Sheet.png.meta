@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: fd04a27ff1dc14f439ad3ccf79057057
+timeCreated: 1460265279
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: lion sprite-Sheet_0
+    21300002: lion sprite-Sheet_1
+    21300004: lion sprite-Sheet_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: lion sprite-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 6
+        width: 343
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 77.5, y: -151}
+        - {x: 103.5, y: -87}
+        - {x: 134.5, y: -75}
+        - {x: 171.5, y: -15}
+        - {x: 171.5, y: 61}
+        - {x: 169.5, y: 71}
+        - {x: 125.5, y: 28}
+        - {x: 116.5, y: -33}
+        - {x: 20.5, y: 103}
+        - {x: -37.5, y: 151}
+        - {x: -61.5, y: 151}
+        - {x: -114.5, y: 144}
+        - {x: -163.5, y: 48}
+        - {x: -171.5, y: 7}
+        - {x: -171.5, y: -44}
+        - {x: -139.5, y: -94}
+        - {x: -147.5, y: -123}
+        - {x: -111.5, y: -151}
+        - {x: -59.5, y: -151}
+        - {x: -41.5, y: -130}
+        - {x: -22.5, y: -118}
+        - {x: 7.5, y: -151}
+    - name: lion sprite-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 21
+        width: 383
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 191.5, y: -35.5}
+        - {x: 164.5, y: 44.5}
+        - {x: 154.5, y: 69.5}
+        - {x: 144.5, y: 81.5}
+        - {x: 164.5, y: 64.5}
+        - {x: 187.5, y: 56.5}
+        - {x: 186.5, y: 98.5}
+        - {x: 167.5, y: 135.5}
+        - {x: 89.5, y: 132.5}
+        - {x: 56.5, y: 118.5}
+        - {x: 48.5, y: 117.5}
+        - {x: 55.5, y: 134.5}
+        - {x: 56.5, y: 143.5}
+        - {x: -22.5, y: 143.5}
+        - {x: -55.5, y: 128.5}
+        - {x: -77.5, y: 134.5}
+        - {x: -120.5, y: 96.5}
+        - {x: -191.5, y: -22.5}
+        - {x: -191.5, y: -125.5}
+        - {x: -157.5, y: -143.5}
+        - {x: -106.5, y: -143.5}
+        - {x: 28.5, y: -79.5}
+        - {x: 175.5, y: -132.5}
+        - {x: 191.5, y: -122.5}
+    - name: lion sprite-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 7
+        width: 325
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98.5, y: -159}
+        - {x: 107.5, y: -159}
+        - {x: 151.5, y: -105}
+        - {x: 116.5, y: -24}
+        - {x: 156.5, y: -26}
+        - {x: 162.5, y: -7}
+        - {x: 162.5, y: 120}
+        - {x: 143.5, y: 140}
+        - {x: 102.5, y: 84}
+        - {x: 135.5, y: 2}
+        - {x: 79.5, y: 43}
+        - {x: 109.5, y: 97}
+        - {x: 117.5, y: 127}
+        - {x: 114.5, y: 130}
+        - {x: 35.5, y: 150}
+        - {x: -20.5, y: 153}
+        - {x: -53.5, y: 153}
+        - {x: -117.5, y: 111}
+        - {x: -140.5, y: 93}
+        - {x: -162.5, y: 25}
+        - {x: -162.5, y: -60}
+        - {x: -142.5, y: -88}
+        - {x: -162.5, y: -132}
+        - {x: -162.5, y: -147}
+        - {x: -150.5, y: -158}
+        - {x: -136.5, y: -159}
+        - {x: -87.5, y: -159}
+        - {x: -57.5, y: -136}
+        - {x: 47.5, y: -87}
+        - {x: 63.5, y: -143}
+      - - {x: -127.5, y: 157}
+        - {x: -127.5, y: 159}
+        - {x: -132.5, y: 159}
+        - {x: -130.5, y: 156}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
