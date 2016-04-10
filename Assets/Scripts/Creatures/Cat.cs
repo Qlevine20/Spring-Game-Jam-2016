@@ -10,6 +10,26 @@ public class Cat : Creature {
     public Sprite CatSprite;
     public Sprite DogSprite;
     private bool CaughtDog;
+    bool isSpotted = false;
+    GameManager GM;
+    int pointsRevealed = 50;
+
+    public override void Update()
+    {
+        base.Update();
+        if (GetComponent<GazeAwareComponent>().HasGaze)
+        {
+            Debug.Log("Found");
+            GetComponent<SpriteRenderer>().sprite = CatSprite;
+            GetComponent<Animator>().SetBool("Seen", true);
+            if (!isSpotted)
+            {
+                GM = FindObjectOfType<GameManager>();
+                GM.ModifyScore(pointsRevealed);
+                isSpotted = true;
+            }
+        }       
+    }
 
     public override Vector3 Spawn()
     {
@@ -70,25 +90,6 @@ public class Cat : Creature {
             other.gameObject.GetComponent<Dog>().Caught = true;
             GetComponent<SpriteRenderer>().sprite = CatSprite;
             GetComponent<Animator>().SetBool("Seen", true);
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D other) 
-    {
-        if (other.tag == "Dot")
-        {
-            Debug.Log("Found");
-            GetComponent<SpriteRenderer>().sprite = CatSprite;
-            GetComponent<Animator>().SetBool("Seen", true);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other) 
-    {
-        if (other.tag == "Dot")
-        {
-            GetComponent<SpriteRenderer>().sprite = DogSprite;
-            GetComponent<Animator>().SetBool("Seen", false);
         }
     }
 }

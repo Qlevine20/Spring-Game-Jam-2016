@@ -8,7 +8,7 @@ public class Dog : Creature {
 	public float speed;
     public bool Caught = false;
 
-	public override Vector3 Spawn(){
+    public override Vector3 Spawn(){
 		var side = Random.Range(0,3);
 		var width = Random.Range(0,Screen.width);
 		var height = Random.Range(0,Screen.height);

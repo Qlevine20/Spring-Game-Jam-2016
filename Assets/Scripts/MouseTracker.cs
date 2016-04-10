@@ -6,10 +6,13 @@ public class MouseTracker : MonoBehaviour {
     private Vector3 mousePosition;
     public float moveSpeed = 1.0f;
     public GameObject FireWorks;
-	// Use this for initialization
-	void Start () {
-	
-	}
+    GameManager GM;
+    int pointsClicked = 100;
+    // Use this for initialization
+    void Start ()
+    {
+        //GM = FindObjectOfType<GameManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -35,6 +38,8 @@ public class MouseTracker : MonoBehaviour {
 
                 }
                 Destroy(other.gameObject);
+                GM = FindObjectOfType<GameManager>();
+                GM.ModifyScore(pointsClicked);
             }
         }
     }
