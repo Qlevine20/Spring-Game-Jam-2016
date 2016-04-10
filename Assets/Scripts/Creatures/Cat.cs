@@ -36,6 +36,10 @@ public class Cat : Creature {
     {
         //if (!CaughtDog)
         //{
+        if (((targetVector - origin).normalized * speed * Time.deltaTime).x > 0) 
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
             return transform.position + (((targetVector - origin)).normalized * speed * Time.deltaTime);
        // }
         //float shortestDist = Screen.width - transform.position.x;
@@ -63,16 +67,19 @@ public class Cat : Creature {
             other.collider.enabled = false;
             GetComponent<Collider2D>().isTrigger = true;
             other.transform.parent = transform;
+            other.gameObject.GetComponent<Dog>().Caught = true;
             GetComponent<SpriteRenderer>().sprite = CatSprite;
+            GetComponent<Animator>().SetBool("Seen", true);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other) 
+    void OnTriggerStay2D(Collider2D other) 
     {
         if (other.tag == "Dot")
         {
             Debug.Log("Found");
             GetComponent<SpriteRenderer>().sprite = CatSprite;
+            GetComponent<Animator>().SetBool("Seen", true);
         }
     }
 
@@ -81,6 +88,7 @@ public class Cat : Creature {
         if (other.tag == "Dot")
         {
             GetComponent<SpriteRenderer>().sprite = DogSprite;
+            GetComponent<Animator>().SetBool("Seen", false);
         }
     }
 }
