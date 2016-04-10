@@ -10,7 +10,7 @@ public class InvisCat : Cat {
     private bool Found = false;
     public GameObject partEffects;
     AudioSource InvisCatFX;
-    float delay = 5.0f;
+    //float delay = 10.0f;
 
 	public override void Start () 
     {
@@ -23,14 +23,14 @@ public class InvisCat : Cat {
 	public override void Update () {
         base.Update();
 	    count += Time.deltaTime;
-        delay += Time.deltaTime;
-        if (!InvisCatFX.isPlaying && delay >= 5.0f)
+        /*delay += Time.deltaTime;
+        if (!InvisCatFX.isPlaying && delay >= 10.0f)
         {
             InvisCatFX.Play();
             delay = 0.0f;
-        }
+        }*/
 
-        if (GetComponent<GazeAwareComponent>().HasGaze) 
+       if (GetComponent<GazeAwareComponent>().HasGaze) 
         {
             Found = true;
             GetComponent<SpriteRenderer>().enabled = true;
@@ -50,4 +50,8 @@ public class InvisCat : Cat {
             count = 0;
         }
 	}
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
+    }
 }

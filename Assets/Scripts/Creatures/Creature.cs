@@ -8,6 +8,10 @@ public abstract class Creature : MonoBehaviour {
     
 	// Use this for initialization
 	public virtual void Start () {
+        if (transform.childCount > 0) 
+        {
+            Destroy(transform.GetChild(0).gameObject);
+        }
 		transform.position = Spawn();
 	}
 	

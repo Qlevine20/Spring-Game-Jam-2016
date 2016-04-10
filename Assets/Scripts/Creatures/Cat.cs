@@ -13,10 +13,27 @@ public class Cat : Creature {
     bool isSpotted = false;
     GameManager GM;
     int pointsRevealed = 50;
+    public string Type;
+    AudioSource CatFX;
+    //float delay;
+
+    public override void Start()
+    {
+        base.Start();
+        CaughtDog = false;
+        //delay = Random.Range(0.0f, 4.0f);
+        CatFX = GetComponent<AudioSource>();
+    }
 
     public override void Update()
     {
         base.Update();
+        /*delay += Time.deltaTime;
+        if (!CatFX.isPlaying && delay >= 12.0f && CaughtDog)
+        {
+            CatFX.Play();
+            delay = 0.0f;
+        }*/
         if (GetComponent<GazeAwareComponent>().HasGaze)
         {
             Debug.Log("Found");
@@ -58,17 +75,24 @@ public class Cat : Creature {
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
+        if (!CaughtDog)
+        {
             return transform.position + (((targetVector - origin)).normalized * speed * Time.deltaTime);
+        }
+
+        return new Vector3(transform.position.x, transform.position.y + Time.deltaTime * speed, transform.position.z);
+        
     }
 
-    void OnCollisionEnter2D(Collision2D other) 
+    public virtual void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.gameObject.tag == "Dog" && !CaughtDog) 
+        if (other.gameObject.tag == "Dog" && !CaughtDog && Time.timeSinceLevelLoad > 2)
         {
+            CatFX.Play();
             Debug.Log("Caught");
             CaughtDog = true;
-            other.collider.enabled = false;
-            GetComponent<Collider2D>().isTrigger = true;
+            other.GetComponent<Collider2D>().enabled = false;
+            //GetComponent<Collider2D>().isTrigger = true;
             other.transform.parent = transform;
             other.gameObject.GetComponent<Dog>().Caught = true;
             GetComponent<SpriteRenderer>().sprite = CatSprite;
@@ -78,7 +102,7 @@ public class Cat : Creature {
     }
     void OnTriggerExit2D(Collider2D other) 
     {
-        if (other.gameObject.tag == "Boundary" && CaughtDog)
+        if (other.gameObject.tag == "Boundary" && transform.childCount > 0)
         {
             GM = FindObjectOfType<GameManager>();
             GM.ModifyLives(1);

@@ -10,10 +10,12 @@ public class Dog : Creature {
     public bool Caught = false;
     AudioSource DogFX;
     float delay;
+    private int dir = 1;
 
     public override void Start()
     {
-        base.Start();
+        Physics2D.IgnoreLayerCollision(8,8);
+        //base.Start();
         delay = Random.Range(0.0f, 4.0f);
         DogFX = GetComponent<AudioSource>();
     }
@@ -22,10 +24,14 @@ public class Dog : Creature {
     {
         base.Update();
         delay += Time.deltaTime;
-        if (!DogFX.isPlaying && delay >= 20.0f)
+        if (!DogFX.isPlaying && delay >= 12.0f)
         {
             DogFX.Play();
             delay = Random.Range(0.0f, 4.0f);
+        }
+        if (!Caught)
+        {
+            transform.position = new Vector3(transform.position.x + (speed * Time.deltaTime * dir), transform.position.y, transform.position.z);
         }
     }
 
@@ -61,4 +67,12 @@ public class Dog : Creature {
         }
         return transform.position;
 	}
+
+    public void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.tag == "wall") 
+        {
+            dir *= -1;
+        }
+    }
 }

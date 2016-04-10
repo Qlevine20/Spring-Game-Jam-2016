@@ -5,8 +5,8 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
     
-    public static int lives = 3;
-    public static int score = 0;
+    public  int lives = 3;
+    public  int score = 0;
     public static float timer = 0.0f;
     public GameObject LoseScreen;
     UI_Score UIscore;
@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour {
     public void LoseGame() 
     {
         LoseScreen.SetActive(true);
-        Time.timeScale = 0.0f;
     }
     public void Update() 
     {

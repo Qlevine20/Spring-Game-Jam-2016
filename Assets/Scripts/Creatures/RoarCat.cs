@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RoarCat : Cat {
+public class RoarCat : Cat
+{
 
 
     public float TimeToRoar = 2;
@@ -17,7 +18,7 @@ public class RoarCat : Cat {
         RoarCatFX = GetComponent<AudioSource>();
     }
 
-    public override void Update() 
+    public override void Update()
     {
         base.Update();
         counter += Time.deltaTime;
@@ -28,11 +29,11 @@ public class RoarCat : Cat {
             delay = 0.0f;
         }
 
-        if (counter > TimeToRoar && !Shouted) 
+        if (counter > TimeToRoar && !Shouted)
         {
             Shouted = true;
             GameObject[] Spawners = GameObject.FindGameObjectsWithTag("Spawner");
-            foreach(GameObject Spawner in Spawners)
+            foreach (GameObject Spawner in Spawners)
             {
                 Instantiate(FireWorks, transform.position, Quaternion.identity);
                 if (Spawner.GetComponent<Animal_Spawner>().interval > 1.5f)
@@ -40,10 +41,7 @@ public class RoarCat : Cat {
                     Spawner.GetComponent<Animal_Spawner>().interval *= .9f;
                 }
             }
-            
+
         }
     }
-	// Use this for initialization
-	
-	// Update is called once per frame
 }
