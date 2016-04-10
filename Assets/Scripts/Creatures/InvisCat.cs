@@ -9,16 +9,27 @@ public class InvisCat : Cat {
     private float countToInvis = 0;
     private bool Found = false;
     public GameObject partEffects;
+    AudioSource InvisCatFX;
+    float delay = 5.0f;
+
 	public override void Start () 
     {
         base.Start();
         GetComponent<SpriteRenderer>().enabled = false;
+        InvisCatFX = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	public override void Update () {
         base.Update();
 	    count += Time.deltaTime;
+        delay += Time.deltaTime;
+        if (!InvisCatFX.isPlaying && delay >= 5.0f)
+        {
+            InvisCatFX.Play();
+            delay = 0.0f;
+        }
+
         if (GetComponent<GazeAwareComponent>().HasGaze) 
         {
             Found = true;

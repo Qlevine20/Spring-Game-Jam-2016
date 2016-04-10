@@ -8,8 +8,28 @@ public class Dog : Creature {
 	private Vector3 origin;
 	public float speed;
     public bool Caught = false;
+    AudioSource DogFX;
+    float delay;
 
-	public override Vector3 Spawn(){
+    public override void Start()
+    {
+        base.Start();
+        delay = Random.Range(0.0f, 4.0f);
+        DogFX = GetComponent<AudioSource>();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+        delay += Time.deltaTime;
+        if (!DogFX.isPlaying && delay >= 20.0f)
+        {
+            DogFX.Play();
+            delay = Random.Range(0.0f, 4.0f);
+        }
+    }
+
+    public override Vector3 Spawn(){
 		var side = Random.Range(0,3);
 		var width = Random.Range(0,Screen.width);
 		var height = Random.Range(0,Screen.height);

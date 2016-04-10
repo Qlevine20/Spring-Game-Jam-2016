@@ -3,16 +3,21 @@ using System.Collections;
 
 public class Fireworks_DestroyatAnimEnd : MonoBehaviour {
 
-    private IEnumerator KillOnAnimationEnd()
+    AudioSource[] ExplosionFX;
+
+    private IEnumerator KillOnAnimationEnd(AudioSource Explosion)
     {
-        yield return new WaitForSeconds(0.4f);
+        Explosion.Play();
+        yield return new WaitForSeconds(0.6f);
         Destroy(gameObject);
     }
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
-        StartCoroutine(KillOnAnimationEnd());
+        ExplosionFX = GetComponents<AudioSource>();
+        int x = Random.Range(0, 2);
+        StartCoroutine(KillOnAnimationEnd(ExplosionFX[x]));
     }
 	
 	// Update is called once per frame

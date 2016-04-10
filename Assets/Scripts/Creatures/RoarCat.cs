@@ -8,11 +8,25 @@ public class RoarCat : Cat {
     private float counter = 0;
     public GameObject FireWorks;
     private bool Shouted = false;
+    AudioSource RoarCatFX;
+    float delay = 6.0f;
+
+    public override void Start()
+    {
+        base.Start();
+        RoarCatFX = GetComponent<AudioSource>();
+    }
 
     public override void Update() 
     {
         base.Update();
         counter += Time.deltaTime;
+        delay += Time.deltaTime;
+        if (!RoarCatFX.isPlaying && delay >= 6.0f)
+        {
+            RoarCatFX.Play();
+            delay = 0.0f;
+        }
 
         if (counter > TimeToRoar && !Shouted) 
         {
