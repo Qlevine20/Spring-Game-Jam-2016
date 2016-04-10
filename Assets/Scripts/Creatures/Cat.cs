@@ -9,7 +9,7 @@ public class Cat : Creature {
     public float speed;
     public Sprite CatSprite;
     public Sprite DogSprite;
-    private bool CaughtDog;
+    private bool CaughtDog =false;
     bool isSpotted = false;
     GameManager GM;
     int pointsRevealed = 50;
@@ -54,28 +54,11 @@ public class Cat : Creature {
 
     public override Vector3 Move()
     {
-        //if (!CaughtDog)
-        //{
         if (((targetVector - origin).normalized * speed * Time.deltaTime).x > 0) 
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
             return transform.position + (((targetVector - origin)).normalized * speed * Time.deltaTime);
-       // }
-        //float shortestDist = Screen.width - transform.position.x;
-        ////((Screen.width - transform.position.x > Screen.width / 2) ? 0 : Screen.width);
-        ////((Screen.height - transform.position.y > Screen.height / 2) ? 0 : Screen.height);
-
-        ////if (Screen.height - transform.position.y < shortestDist) 
-        ////{
-        ////    shortestDist = Screen.height - transform.position.y;
-        ////}
-        ////if (transform.position.y < Screen.height / 2) 
-        ////{
-        ////    shortestDist = transform.position.
-        ////}
-        
-        //return transform.position * speed * Time.deltaTime;
     }
 
     void OnCollisionEnter2D(Collision2D other) 
@@ -90,6 +73,15 @@ public class Cat : Creature {
             other.gameObject.GetComponent<Dog>().Caught = true;
             GetComponent<SpriteRenderer>().sprite = CatSprite;
             GetComponent<Animator>().SetBool("Seen", true);
+        }
+
+    }
+    void OnTriggerExit2D(Collider2D other) 
+    {
+        if (other.gameObject.tag == "Boundary" && CaughtDog)
+        {
+            GM = FindObjectOfType<GameManager>();
+            GM.ModifyLives(1);
         }
     }
 }

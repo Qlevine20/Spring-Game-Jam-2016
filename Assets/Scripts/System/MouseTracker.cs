@@ -23,14 +23,18 @@ public class MouseTracker : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "Cat") 
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Found");
-            if (Input.GetMouseButtonDown(0)) 
+            GetComponent<Animator>().SetBool("Activated", true);
+            if (other.tag == "Cat")
             {
+
+                Debug.Log("Found");
+
+
                 Debug.Log("Destroy");
                 Instantiate(FireWorks, transform.position, Quaternion.identity);
-                if (other.transform.childCount > 0) 
+                if (other.transform.childCount > 0)
                 {
                     GameObject child = other.transform.GetChild(0).transform.gameObject;
                     child.transform.parent = null;
