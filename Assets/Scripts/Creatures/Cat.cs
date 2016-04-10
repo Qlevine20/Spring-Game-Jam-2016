@@ -61,6 +61,7 @@ public class Cat : Creature {
             Debug.Log("Caught");
             CaughtDog = true;
             other.collider.enabled = false;
+            GetComponent<Collider2D>().isTrigger = true;
             other.transform.parent = transform;
             GetComponent<SpriteRenderer>().sprite = CatSprite;
         }
@@ -72,7 +73,6 @@ public class Cat : Creature {
         {
             Debug.Log("Found");
             GetComponent<SpriteRenderer>().sprite = CatSprite;
-            other.isTrigger = true;
         }
     }
 
@@ -81,7 +81,6 @@ public class Cat : Creature {
         if (other.tag == "Dot")
         {
             GetComponent<SpriteRenderer>().sprite = DogSprite;
-            other.isTrigger = false;
         }
     }
 }
